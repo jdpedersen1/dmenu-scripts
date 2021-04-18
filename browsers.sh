@@ -1,11 +1,12 @@
 #!/bin/bash
 
-declare options=("badwolf
-brave
-firefox
-librewolf
-qutebrowser
-surf")
+declare options=("Badwolf
+Brave
+Firefox
+Jakes
+Librewolf
+Qutebrowser
+Surf")
 
 choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Mono' -p 'launch browser: ' -nb '#222222' -nf '#71988a' -sb '#000000' -sf '#71988a')
 
@@ -13,23 +14,26 @@ case "$choice" in
     quit)
         echo "program terminated." && exit 1
     ;;
-    badwolf)
+    Badwolf)
         choice="badwolf"
     ;;
-    brave)
+    Brave)
         choice="brave"
     ;;
-    firefox)
+    Firefox)
         choice="firefox"
     ;;
-    librewolf)
+    Jakes)
+        choice="jakeweb"
+    ;;
+    Librewolf)
         choice="librewolf"
     ;;
-    qutebrowser)
+    Qutebrowser)
         choice="qutebrowser"
     ;;
-    surf)
-        choice="surf"
+    Surf)
+        choice="surf" https://suckless.org
     ;;
 esac
 "$choice"
