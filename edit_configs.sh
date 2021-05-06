@@ -6,6 +6,7 @@ awesome
 bash
 broot
 bspwm
+conky
 doom.d/config.el
 doom.d/init.el
 dunst
@@ -32,7 +33,7 @@ xresources
 zsh
 quit")
 
-choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'RobotoItalic' -p 'Edit config file: ' -nb '#222222' -nf '#71988a' -sb '#000000' -sf '#71988a')
+choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Bold' -p 'Edit config file: ' -nb '#222222' -nf '#71988a' -sb '#000000' -sf '#71988a')
 #choice=$(echo -e "${options[@]}" | rofi -dmenu -p 'Edit config file: ')
 
 case "$choice" in
@@ -54,10 +55,13 @@ case "$choice" in
 	bspwm)
 		choice="$HOME/.config/bspwm/bspwmrc"
 	;;
-  doom.d/config.el)
+    conky)
+        choice="$HOME/.config/conky/conky.conf"
+    ;;
+    doom.d/config.el)
 		choice="$HOME/.doom.d/config.el"
 	;;
-  doom.d/init.el)
+    doom.d/init.el)
 		choice="$HOME/.doom.d/init.el"
 	;;
 	dunst)
@@ -75,12 +79,12 @@ case "$choice" in
 	i3)
 		choice="$HOME/.config/i3/config"
 	;;
-  i3blocks)
-    choice="$HOME/.config/i3blocks/config"
-  ;;
-  i3status)
-    choice="$HOME/.config/i3status/config"
-  ;;
+    i3blocks)
+        choice="$HOME/.config/i3blocks/config"
+    ;;
+    i3status)
+        choice="$HOME/.config/i3status/config"
+    ;;
 	picom)
 		choice="$HOME/.config/picom/picom.conf"
 	;;
@@ -90,8 +94,8 @@ case "$choice" in
 	qtile)
 		choice="$HOME/.config/qtile/config.py"
 	;;
-  qutebrowser)
-    choice="$HOME/.config/qutebrowser/config.py"
+    qutebrowser)
+        choice="$HOME/.config/qutebrowser/config.py"
     ;;
 	spectrwm)
 		choice="$HOME/.spectrwm.conf"
