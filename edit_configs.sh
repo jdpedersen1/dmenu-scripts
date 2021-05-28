@@ -33,7 +33,7 @@ xresources
 zsh
 quit")
 
-choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Bold' -p 'Edit config file: ' -nb '#222222' -nf '#71988a' -sb '#000000' -sf '#71988a')
+choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Bold' -p 'Edit config file: ' -nb '#3b3b3b' -nf '#71988a' -sb '#000000' -sf '#71988a')
 #choice=$(echo -e "${options[@]}" | rofi -dmenu -p 'Edit config file: ')
 
 case "$choice" in

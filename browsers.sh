@@ -8,7 +8,7 @@ Librewolf
 Qutebrowser
 Surf")
 
-choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Mono' -p 'launch browser: ' -nb '#222222' -nf '#71988a' -sb '#000000' -sf '#71988a')
+choice=$(echo -e "${options[@]}" | dmenu -c -g 1 -l 10 -i -fn 'Roboto Mono' -p 'launch browser: ' -nb '#3b3b3b' -nf '#71988a' -sb '#000000' -sf '#71988a')
 #choice=$(echo -e "${options[@]}" | rofi -dmenu -p 'Launch browser: ')
 
 
